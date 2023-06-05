@@ -11,7 +11,7 @@ import parse from "html-react-parser";
 // imports - next
 import Image from "next/image";
 
-// home
+// main - home
 export default function Home () {
 	const messageRef = useRef ();
 	const [ messages, setMessages ] = useState ( [] );
