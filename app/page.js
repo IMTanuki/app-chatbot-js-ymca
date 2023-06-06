@@ -120,7 +120,7 @@ export default function Home () {
 
 			{/*  input field */}
 			<input
-				className="mx-2 lg:mx-0 py-2 px-4 bg-white border border-gray-500 rounded-lg text-gray-700 placeholder-gray-500 "
+				className="py-2 px-4 bg-white border border-gray-500 rounded-lg text-gray-700 placeholder-gray-500 "
 				required
 				type="text"
 				ref={messageRef}
