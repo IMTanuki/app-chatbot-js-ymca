@@ -112,7 +112,7 @@ export default function Home () {
 		</div>
 
 		{/* messages - form */}
-		<form className="mt-6 mx-2 lg:mx-0 grid grid-cols-[50px,4fr,1fr] gap-4 items-center"
+		<form className="mt-6 grid grid-cols-[50px,4fr,1fr] gap-4 items-center"
 			  		onSubmit={handleSubmit}>
 
 			{/*  empty space */}
@@ -120,11 +120,11 @@ export default function Home () {
 
 			{/*  input field */}
 			<input
-				className="py-2 px-4 bg-white border border-gray-500 rounded-lg text-gray-700 placeholder-gray-500 "
+				className="mx-2 lg:mx-0 py-2 px-4 bg-white border border-gray-500 rounded-lg text-gray-700 placeholder-gray-500 "
 				required
 				type="text"
 				ref={messageRef}
-				placeholder="Ask me anything (then press the enter key or click the send btn)."
+				placeholder="Ask me something...."
 			/>
 
 			{/* submit btn */}
