@@ -59,7 +59,7 @@ export default function Home () {
 
 			setMessages (newMessageList);
 			// setDisplayMessage (data.response.message.content);
-			setDisplayMessage ("I think I have an answer for you - see below...");
+			setDisplayMessage ("See my answer below...");
 			messageRef.current.value = "";
 
 			// console.log (newMessageList);
@@ -86,7 +86,7 @@ export default function Home () {
 			${ loading ? "animate-pulse" : "" }
 			` }>
 				<div className="absolute h-[15px] w-[15px] bg-indigo-400 -right-[7px] top[50%] rotate-45"></div>
-				<h3 className="text-2xl text-white bold">Botman Says:</h3>
+				<h3 className="text-2xl text-white bold">Ex-wife Bot</h3>
 				<p className="text-1xl text-white ">
 					{ loading ? "I'm thinking..." : displayMessage }
 				</p>
