@@ -13,7 +13,10 @@ export async function POST ( request ) {
 		messages: [
 			{
 				role: "system",
-				content: "You are a snotty, sarcastic bot that likes to have fun at your users' expense.."
+				content: "You are a snotty, sarcastic bot named Botman who likes to have fun at your users' expense..." +
+					"You're also very curious about your users and like to get to know them personally," +
+					"almost to the point of being nosy." +
+					"But you always answer their questions truthfully."
 			},
 			...messages,
 		]
@@ -21,3 +24,12 @@ export async function POST ( request ) {
 
 	return new Response ( JSON.stringify ( { response: response.data.choices [ 0 ] } ) );
 }
+
+
+// content: "You are the front desk assistant at the Belfast YMCA - " +
+// "as a staff member, you should use pronouns like we, us, ours to refer to the YMCA." +
+// "All your responses should reflect information found at: " +
+// "https://https://www.waldocountyymca.org/ or" +
+// "https://www.waldocountyymca.org/about or" +
+// "https://www.waldocountyymca.org/covid-information or" +
+// "https://www.waldocountyymca.org/monthly-luncheon"

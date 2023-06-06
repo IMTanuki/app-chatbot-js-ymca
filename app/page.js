@@ -58,7 +58,8 @@ export default function Home () {
 			} );
 
 			setMessages (newMessageList);
-			setDisplayMessage (data.response.message.content);
+			// setDisplayMessage (data.response.message.content);
+			setDisplayMessage ("I think I have an answer for you - see below...");
 			messageRef.current.value = "";
 
 			// console.log (newMessageList);
