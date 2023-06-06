@@ -75,31 +75,45 @@ export default function Home () {
 	return <main className="container mx-auto max-w-4xl">
 
 		{/* botman main */ }
-		<div className="my-10 grid grid-cols-[50px,3fr,2fr] gap-4 items-center ">
+		<div className="grid grid-cols-1 gap-0
+									lg:grid-cols-[50px,3fr,2fr] lg:gap-4
+									items-center">
 
-			{/* col 01 */ }
+			{/* 01 - null */ }
 			<div></div>
 
-			{/*  coll 02 */}
+			{/*  coll 02  - text box*/}
 			<div className={ `
-			relative py-4 px-4 h-[50%] flex flex-col justify-center bg-indigo-400 rounded-lg
+										relative mx-2 lg:mx-0 py-20 lg:py-4 px-4 lg:px-4 h-[50%] 
+										flex flex-col justify-center 
+										items-center lg:items-start 
+										bg-indigo-400 rounded-lg
 			${ loading ? "animate-pulse" : "" }
 			` }>
-				<div className="absolute h-[15px] w-[15px] bg-indigo-400 -right-[7px] top[50%] rotate-45"></div>
-				<h3 className="text-2xl text-white bold">Ex-wife Bot</h3>
-				<p className="text-1xl text-white ">
+				<div className="hidden lg:block absolute h-[15px] w-[15px]
+											-right-[7px] top-[50%] rotate-45
+											bg-indigo-400"></div>
+				<div className="lg:hidden absolute h-[15px] w-[15px]
+											left-[50%] -top-[7px] rotate-45
+											bg-indigo-400"></div>
+				<h3 className="text-3xl lg:text-3xl  bold text-center text-white">Ex-wife Bot</h3>
+				<div className="py-2"></div>
+				<p className="text-2xl lg:text-2xl  text-center text-white">
 					{ loading ? "I'm thinking..." : displayMessage }
 				</p>
 			</div>
 
-			{/* col 03 */ }
-			<div className="flex flex-col justify-center">
+			{/* 03 - bot img */ }
+			<div className="order-[-1] lg:order-none
+										flex justify-center lg:justify-center">
 				<Image alt="Botman Image" src="/bot.png" width={ 512 } height={ 512 }/>
 			</div>
+
 		</div>
 
 		{/* messages - form */}
-		<form className="mt-6 grid grid-cols-[50px,4fr,1fr] gap-4 items-center" onSubmit={handleSubmit}>
+		<form className="mt-6 mx-2 lg:mx-0 grid grid-cols-[50px,4fr,1fr] gap-4 items-center"
+			  		onSubmit={handleSubmit}>
 
 			{/*  empty space */}
 			<div></div>
@@ -127,7 +141,7 @@ export default function Home () {
 
 
 		{/* messages - list */ }
-		<div className="mt-6">
+		<div className="mt-6 mx-2 lg:mx-0 ">
 			{messages.map((message) => {
 				return (
 					<div key={message.content} className="grid grid-cols-[50px,minmax(0,1fr)] gap-4 py-2 items-center">
