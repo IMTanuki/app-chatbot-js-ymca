@@ -111,16 +111,22 @@ export default function Home () {
 
 		</div>
 
-		{/* messages - form */}
-		<form className="mt-6 grid grid-cols-[50px,4fr,1fr] gap-4 items-center"
+		{/*  form */}
+		<form className="mt-6
+									grid grid-cols-1 gap-0
+									lg:grid-cols-[50px,4fr,1fr] lg:gap-4
+									items-center"
 			  		onSubmit={handleSubmit}>
 
-			{/*  empty space */}
-			<div></div>
+			{/* empty space */}
+			<div className="hidden lg:block lg:col-span-1"></div>
 
 			{/*  input field */}
 			<input
-				className="py-2 px-4 bg-white border border-gray-500 rounded-lg text-gray-700 placeholder-gray-500 "
+				className="mx-2 lg:mx-0 py-2 px-4
+									col-span-3 lg:col-span-1
+									bg-white border border-gray-500 rounded-lg
+									text-gray-700 placeholder-gray-500 "
 				required
 				type="text"
 				ref={messageRef}
@@ -130,14 +136,18 @@ export default function Home () {
 			{/* submit btn */}
 			<button
 				type="submit"
-				className="px-4 py-2 bg-gray-100 border border-gray-700 rounded-lg text-gray-700 hover:scale-110 transition-all duration-200"
-			>
+				className="px-4 py-2
+									hidden lg:flex lg:col-span-1
+									bg-gray-100 border border-gray-700 rounded-lg text-gray-700
+									hover:scale-110 transition-all duration-200 ">
 				<div className="flex flex-row gap-4">
 					<span>SEND</span>
-					<FontAwesomeIcon className="pt-1" icon={faPaperPlane} />
+					<FontAwesomeIcon className="pt-1"
+									 				icon={faPaperPlane} />
 				</div>
 			</button>
 		</form>
+
 
 
 		{/* messages - list */ }
