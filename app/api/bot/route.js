@@ -10,6 +10,7 @@ export async function POST ( request ) {
 	const openai = new OpenAIApi ( configuration );
 	const response = await openai.createChatCompletion ( {
 		model: "gpt-4",
+		temperature: .8,
 		messages: [
 			{
 				role: "system",
