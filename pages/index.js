@@ -39,7 +39,7 @@ export default function Home () {
 
 		// call router and upd
 		try {
-			const response = await fetch ( "api/bot", {
+			const response = await fetch ( '/api/bot', {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -101,7 +101,7 @@ export default function Home () {
 						<div className="lg:hidden absolute h-[15px] w-[15px]
 											left-[50%] -top-[7px] rotate-45
 											bg-indigo-400"></div>
-						<h3 className="text-3xl lg:text-3xl  bold text-center text-white">Ex-wife Bot</h3>
+						<h3 className="text-3xl lg:text-3xl  bold text-center text-white">YMCA Info Bot</h3>
 						<div className="py-2"></div>
 						<p className="text-2xl lg:text-2xl  text-center text-white">
 							{ loading ? "I'm thinking..." : displayMessage }
